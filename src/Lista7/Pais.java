@@ -41,9 +41,6 @@ public class Pais {
     public void mostraosVizinhos(){
         for (Pais p1: vizinhos) System.out.println("Nome: " + p1.getNome() );
 
-
-
-
     }
 
     public String getISO() {
@@ -77,11 +74,6 @@ public class Pais {
     public void setDimenssao(double dimenssao) {
         this.dimenssao = dimenssao;
     }
-
-
-
-
-
 
 }
 
