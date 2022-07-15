@@ -26,5 +26,11 @@ public class Main {
         System.out.println("A quantidade da população Pais é   " + p2.getPopulacaoQuant() );
         System.out.println("Densidade     " + p2.calculpDensidade(200,50000));
 
+        List<String> fronteiraVizinho = p1.getVizinhos("Brasil");
+        if (fronteiraVizinho) {
+            System.out.println("Esse País é vizinho ");
+        } else {
+            System.out.println("Esse país não é vizinho");
+        }
     }
 }

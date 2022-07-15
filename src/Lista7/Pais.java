@@ -1,7 +1,6 @@
 package src.Lista7;
-import javax.swing.*;
-import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 public class Pais {
 
@@ -11,15 +10,15 @@ public class Pais {
     private double populacaoQuant;
     private double dimenssao;
 
-    private List<Pais> vizinhos = new ArrayList<>();
+    private List<String> vizinhos = new ArrayList<>(Arrays.asList("Suriname","Guiana", "Guiana Francesa", "Venezuela","Colômbia","Peru","Bolívia","Paraguai","Argentina","Uruguai"));
 
 
-    public void setVizinhos(List<Pais> vizinhos) {
+    public void setVizinhos(List<String> vizinhos) {
         this.vizinhos = vizinhos;
 
 
     }
-    public List<Pais> getVizinhos() {
+    public List<String> getVizinhos(String s) {
         return vizinhos;}
 
 
@@ -33,13 +32,19 @@ public class Pais {
         return  populacaoQuant / dimenssao;
 
     }
-    public void inserirPais (Pais pais){
+    public void inserirPais (String pais){
         this.vizinhos.add(pais);
 
 
     }
+
+    public boolean fronteiraVizinho(String nome) {
+        return vizinhos.contains(nome);
+
+    }
+
     public void mostraosVizinhos(){
-        for (Pais p1: vizinhos) System.out.println("Nome: " + p1.getNome() );
+        for (String p1: vizinhos) System.out.println("Nome: " + p1.getBytes() );
 
     }
 
